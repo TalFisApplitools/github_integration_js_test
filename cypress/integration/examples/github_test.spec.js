@@ -1,6 +1,6 @@
 const { describe } = require("mocha");
 
-describe("CypressTest", () => {
+describe("Cypress Test", () => {
 
     it("Start test", () => {
         cy.visit('https://demo.applitools.com');
@@ -23,6 +23,7 @@ describe("CypressTest", () => {
             target: "window",
             fully: true
         });
+
 
         cy.eyesClose();
     });

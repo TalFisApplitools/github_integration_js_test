@@ -1,6 +1,6 @@
 const { describe } = require("mocha");
 
-describe("Cypress Test", () => {
+describe("Cypress Test FINAL!", () => {
 
     it("Start test", () => {
         cy.visit('https://demo.applitools.com');

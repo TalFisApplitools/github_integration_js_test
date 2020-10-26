@@ -4,13 +4,14 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "test": "mocha --no-timeouts \"test/integration.js\""
+        "test": "npx cypress run --browser chrome --spec 'cypress/integration/ufg.spec.js'",
+        "cypress:open": "cypress open"
     },
     "author": "",
     "license": "ISC",
     "dependencies": {
-        "@applitools/eyes-selenium": "^4.46.1",
-        "mocha": "^8.2.0",
-        "selenium-webdriver": "^4.0.0-alpha.7"
+        "@applitools/eyes-cypress": "latest",
+        "cypress": "^5.4.0",
+        "mocha": "latest"
     }
 }

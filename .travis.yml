@@ -3,20 +3,14 @@ if: tag IS blank
 language: node_js
 node_js:
   - 12
-before_install:
-  - brew update > /dev/null
-  - brew cask install google-chrome
 addons:
   apt:
-    update: true
-    sources:
-      - google-chrome
     packages:
-      - dpkg
-      - google-chrome-stable
-      - libgconf-2-4
+    - libgconf-2-4
 script:
   - export APPLITOOLS_BATCH_ID=`echo ${TRAVIS_PULL_REQUEST_SHA:=$TRAVIS_COMMIT}`
   - echo $APPLITOOLS_BATCH_ID
   - npm install
-  - npm test
+  - npx eyes-setup
+  - npx cypress run --spec “cypress/integration/examples/github_test.spec.js”
+

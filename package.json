@@ -1,0 +1,17 @@
+{
+    "name": "github_integration",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "mocha --no-timeouts \"test/integration.js\""
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@applitools/eyes-selenium": "^4.46.1",
+        "chromedriver": "^86.0.0",
+        "mocha": "^8.2.0",
+        "selenium-webdriver": "^4.0.0-alpha.7"
+    }
+}
